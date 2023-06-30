@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: #1e3d58;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  background-color: #008ae6;
+  padding: 70px 50px;
+  border-radius: 20px;
+  position: relative;
+}
+.container::after {
+  content: "Countdown Of 2023";
+  position: absolute;
+  font-weight: normal;
+  font-size: 35px;
+  color: #e8eef1;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+}
+span {
+  background-color: #62bff5;
+  width: 23%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:  50px;
+  border-radius: 18px;
+  border: 2px solid #1e3d58;
+  color: #e8eef1;
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+}
+span.days::before {
+  content: "Days";
+  position: absolute;
+  font-size: 25px;
+  font-weight: normal;
+  bottom: 10px;
+  color: #1e3d58;
+}
+span.hours::before {
+  content: "Hours";
+  position: absolute;
+  font-size: 25px;
+  font-weight: normal;
+  bottom: 10px;
+  color: #1e3d58;
+}
+span.minutes::before {
+  content: "Minutes";
+  position: absolute;
+  font-size: 25px;
+  font-weight: normal;
+  bottom: 10px;
+  color: #1e3d58;
+}
+span.seconds::before {
+  content: "Seconds";
+  position: absolute;
+  font-size: 25px;
+  font-weight: normal;
+  bottom: 10px;
+  color: #1e3d58;
+}
+
+@media (max-width: 950px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 780px) {
+  .container {
+    width: 90%;
+  }
+  .container::after {
+    font-size: 25px;
+  }
+  span.days::before,
+  span.hours::before, 
+  span.minutes::before, 
+  span.seconds::before  {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  span {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 40px;
+    font-size: 55px;
+  }
+}
